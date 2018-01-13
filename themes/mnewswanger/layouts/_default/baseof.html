@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mike Newswanger">
 
-    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.ico">
 
     <title>{{.Site.Title}} - {{.Page.Title}}</title>
 
@@ -46,18 +46,42 @@
                         <ul class="menuzord-menu menuzord-right c-nav_s-standard">
                             <li><a href="/">Home</a></li>
                             <li><a href="/resume">Resume</a></li>
+                            <li><a href="/posts">Blog</a>
+                                <!-- <ul class="dropdown">
+                                    <li><a href="#">Category</a></li>
+                                </ul> -->
+                            </li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </header>
 
-        {{ block "main" . }} {{ end }}
+        {{ block "header" . }} {{ end }}
+
+        <section class="body-content">
+            <div class="page-content p-top-0">
+                <div class="container">
+                {{ block "main" . }} {{ end }}
+                </div>
+            </div>
+        </section>
 
         <footer id="footer" class="dark">
                 <div class="primary-footer">
                     <div class="container">
                         <div class="row">
+                            <div class="col-sm-6">
+                                <h5 class="text-uppercase">Recent Blog Posts</h5>
+                                <ul class="f-list">
+                                {{ $section := where .Site.RegularPages "Section" "in" "posts" }}
+                                {{ $n_posts := $.Param "recent_posts_number" | default 3 }}
+                                
+                                {{ range (first $n_posts $section) }}
+                                <li><a href="{{ .URL }}">{{ .Title }}</a></li>
+                                {{ end }}
+                                </ul>
+                            </div>
                             <div class="col-sm-6">
                                 <h5 class="text-uppercase">Open Source Projects</h5>
                                 <ul class="f-list">
