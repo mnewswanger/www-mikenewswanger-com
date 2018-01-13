@@ -6,7 +6,6 @@ description: ""
 <div>
     <h1>Mike Newswanger</h1>
     <h4>Tech enthusiast and accomplished software developer, systems engineer, and database administrator that is passionate about learning and helping others</h4>
-
     <div class="row">
         <div class="text-center">
             <h3 class="text-uppercase">Skills </h3>
@@ -55,7 +54,6 @@ description: ""
             </div>
         </div>
     </div>
-
     <div class="row">
         <div class="col-md-6">
             <div class="featured-item feature-outline m-bot-50">
@@ -96,7 +94,6 @@ description: ""
             </div>
         </div>
     </div>
-
     <div class="row">
         <div class="col-md-6">
             <div class="featured-item feature-outline m-bot-50">
@@ -135,7 +132,6 @@ description: ""
             </div>
         </div>
     </div>
-
     <div class="row">
         <div class="text-center">
             <h3 class="text-uppercase">Projects</h3>
@@ -217,7 +213,6 @@ description: ""
             </div>
         </div>
     </div>
-
     <div class="row">
         <div class="text-center">
             <h3 class="text-uppercase">Technologies</h3>
@@ -249,7 +244,6 @@ description: ""
         <div class="col-md-4">
             <div class="m-bot-50">
                 <h4>Infrastructure</h4>
-
                 Operating Systems
                 <ul>
                     <li>Linux - CentOS, Ubuntu, CoreOS</li>
@@ -289,7 +283,6 @@ description: ""
             </div>
         </div>
     </div>
-
     <div class="row">
         <div class="featured-item w-100 m-bot-50">
             <div class="text-center">
@@ -300,46 +293,53 @@ description: ""
                     <a>Stack Overflow - <em>August 2017 - Present</em></a>
                 </dt>
                 <dd>
-                    <strong>Site Reliability Engineer</strong> - <em>August 2017 - Present</em>
-                    <p>Ensure that all supporting services for Stack Overflow properties are online, performant, and secure.  Develop and implmement tooling and processes to manage large sets of infrastructure effectively with a small team.</p>
+                    <div>
+                        <strong>Site Reliability Engineer</strong> - <em>August 2017 - Present</em>
+                        <p>Ensure that all supporting services for Stack Overflow properties are online, performant, and secure.  Develop and implmement tooling and processes to manage large sets of infrastructure effectively with a small team.</p>
+                    </div>
                 </dd>
-
                 <dt>
                     <a>WebstaurantStore - <em>July 2011 - August 2017</em></a>
                 </dt>
                 <dd>
-                    <strong>Site Reliability Engineering Manager</strong> - <em>November 2016 - August 2017</em>
-                    <p>Lead the Site Reliability Engineering (SRE) team of eight supporting over 100 developers.  Guided SREs in orchestration and deployment strategies, developed supporting tools, and trained employees on issue resolution.</p>
-
-                    <strong>Web Operations Manager</strong> - <em>October 2012 - November 2016</em>
-                    <p>Built up the Web Operations team from scratch to eight Site Reliability Engineers, eight Database Administrators, and four Systems Engineers.  Developed high-availability and infrastructure strategies that reduced hardware budgets by over 50% while providing greater performance.</p>
-
-                    <strong>Database Administrator</strong> - <em>October 2011 - October 2012</em>
-                    <p>Lead an architecture revamp to solve availability and performance issues.  Designed and implemented a highly replication strategy to meet both redundancy and performance goals.  Reduced SQL transaction times by over 80% on average.</p>
-
-                    <strong>Web Developer</strong> - <em>July 2011 - October 2011</em>
-                    <p>Led a development team for a high-traffic e-commerce site.  Trained new hires to get them up to speed.</p>
+                    <div>
+                        <strong>Site Reliability Engineering Manager</strong> - <em>November 2016 - August 2017</em>
+                        <p>Lead the Site Reliability Engineering (SRE) team of eight supporting over 100 developers.  Guided SREs in orchestration and deployment strategies, developed supporting tools, and trained employees on issue resolution.</p>
+                    </div>
+                    <div>
+                        <strong>Web Operations Manager</strong> - <em>October 2012 - November 2016</em>
+                        <p>Built up the Web Operations team from scratch to eight Site Reliability Engineers, eight Database Administrators, and four Systems Engineers.  Developed high-availability and infrastructure strategies that reduced hardware budgets by over 50% while providing greater performance.</p>
+                    </div>
+                    <div>
+                        <strong>Database Administrator</strong> - <em>October 2011 - October 2012</em>
+                        <p>Lead an architecture revamp to solve availability and performance issues.  Designed and implemented a highly replication strategy to meet both redundancy and performance goals.  Reduced SQL transaction times by over 80% on average.</p>
+                    </div>
+                    <div>
+                        <strong>Web Developer</strong> - <em>July 2011 - October 2011</em>
+                        <p>Led a development team for a high-traffic e-commerce site.  Trained new hires to get them up to speed.</p>
+                    </div>
                 </dd>
-
                 <dt>
                     <a>YDOP Internet Marketing - <em>May 2010 - July 2011</em></a>
                 </dt>
                 <dd>
-                    <strong>Lead Developer</strong> - <em>May 2010 - July 2011</em>
-                    <p>Created project specifications and implementation plans for client work.  Developed modular, reusable components for client delivery.  Increased developer productivity and reduced learning curve for new developers.</p>
+                    <div>
+                        <strong>Lead Developer</strong> - <em>May 2010 - July 2011</em>
+                        <p>Created project specifications and implementation plans for client work.  Developed modular, reusable components for client delivery.  Increased developer productivity and reduced learning curve for new developers.</p>
+                    </div>
                 </dd>
-
                 <dt>
                     <a>Sharp Innovations - <em>March 2008 - August 2010</em></a>
                 </dt>
                 <dd>
-                    <strong>Web Developer</strong> - <em>March 2008 - August 2010</em>
-                    <p>Develop software based on client needs.  Manage servers, access, security, and databases.</p>
+                    <div>
+                        <strong>Web Developer</strong> - <em>March 2008 - August 2010</em>
+                        <p>Develop software based on client needs.  Manage servers, access, security, and databases.</p>
+                    </div>
                 </dd>
             </dl>
         </div>
     </div>
-
     <div class="row">
         <div class="text-center">
             <h3 class="text-uppercase">Certifications</h3>
@@ -378,7 +378,6 @@ description: ""
             </ul>
         </div>
     </div>
-
     <div class="row">
         <div class="featured-item w-100 text-center m-bot-50">
             <div class="icon ">
