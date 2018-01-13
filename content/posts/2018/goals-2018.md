@@ -1,6 +1,6 @@
 ---
-title: "Test Post"
-date: 2018-01-03T21:46:27-05:00
+title: "Goals 2018"
+date: 2018-01-03T21:00:00-05:00
 draft: true
 tags: [professional development]
 description: "Passionate Tech Enthusiast"
@@ -11,10 +11,10 @@ I want to give myself the best chance of success that I can; for each of the goa
 
 ## Publish a blog entry every other week ##
 
-## Read at least one professional book per month ##
+## Read at least one non-fiction book per month ##
 
 ## Speak at a large conference ##
 
-## Excercise every day ##
+## Excercise regularly ##
 
-## Get better at playing guitar ##
+## Practice playing guitar more ##

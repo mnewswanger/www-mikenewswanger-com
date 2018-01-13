@@ -1,4 +1,3 @@
 ---
-title: "Blog"
-date: 2018-01-03T21:52:01-05:00
+title: "Blog Entries"
 ---

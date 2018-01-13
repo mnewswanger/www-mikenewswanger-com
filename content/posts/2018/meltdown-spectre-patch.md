@@ -1,9 +1,9 @@
 ---
-title: "Goals 2018"
-date: 2018-01-03T21:46:27-05:00
+title: Patching Meltdown & Spectra at Stack Overflow - Round 1
+date: 2018-01-13T09:00:00-05:00
 draft: true
-tags: [professional development]
-description: "Passionate Tech Enthusiast"
+tags: [performance, security]
+description: Overview of the implementation process and performance hits of Meltdown and Spectre Patches on Stack Overflow's Web Servers.
 type: post
 ---
 

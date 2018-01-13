@@ -74,7 +74,7 @@
                             <div class="col-sm-6">
                                 <h5 class="text-uppercase">Recent Blog Posts</h5>
                                 <ul class="f-list">
-                                {{ $section := where .Site.RegularPages "Section" "in" "posts" }}
+                                {{ $section := where .Site.RegularPages "Section" "eq" "posts" }}
                                 {{ $n_posts := $.Param "recent_posts_number" | default 3 }}
                                 
                                 {{ range (first $n_posts $section) }}
