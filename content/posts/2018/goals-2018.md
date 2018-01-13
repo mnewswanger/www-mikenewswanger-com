@@ -1,9 +1,8 @@
 ---
 title: "Goals 2018"
 date: 2018-01-03T21:00:00-05:00
-draft: true
 tags: [professional development]
-description: "New year & new goals: here's what I'm going to accomplish this year"
+description: "New year & new goals: here's what I'm going to accomplish this year."
 ---
 
 For many people, brining in the new year means coming up with resolutions.  This year, I was one of them, and I've come up with a few personal goals.  I want to give myself the best chance of success that I can; for each of the goals, I'm targeting SMART objectives--Specific, Measurable, Acheivable, Realistic, and Testable.  This ensures that I can be accountable to myself and do what's needed to get them done.  Without further ado, here's my list:
