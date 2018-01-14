@@ -4,7 +4,7 @@
 {{ .Content }}
 
 {{ $section := where .Data.Pages "Section" .Section }}
-    {{ range  $section }}
-        {{ partial "posts/summary.html" . }}
-    {{ end }}
+{{ range  $section }}
+    {{ partial "posts/summary.html" . }}
+{{ end }}
 {{ end }}
