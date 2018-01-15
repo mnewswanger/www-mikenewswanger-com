@@ -144,12 +144,17 @@
         <script src="/js/wow/wow.min.js"></script>
         <script src="/js/scripts.min.js"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'UA-62766896-1');
+
+            hljs.initHighlightingOnLoad();
+
+            $('.magnific-popup').magnificPopup({
+                type: 'image'
+            });
         </script>
     </body>
     

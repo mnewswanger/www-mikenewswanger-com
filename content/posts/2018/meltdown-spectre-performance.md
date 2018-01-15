@@ -38,29 +38,51 @@ Server performance was immediately visible after patching our test servers.  The
 
 This is a bare metal Windows 2012 R2 server running on Dell R630 (13th generation) rack-mount hardware.
 
+To make sure that this is a fair comparison, let's also take a look at the number of requests being serviced by the web tier.  While this is feeding active public traffic, our load patterns are consistent over time so there is little variance caused by workload changes.
+
+<a href="/img/posts/2018/spectre-meltdown-performance/web-iis-requests.jpg" class="magnific-popup" title="Web Server CPU Utilization">
+    <img src="/img/posts/2018/spectre-meltdown-performance/web-iis-requests.jpg">
+</a>
+
 Let's take a look at CPU first.  The graph below shows the CPU on one of our front-end web servers before and after the patch.
 
-!!! GRAPH - CPU BEFORE & AFTER !!!
+<a href="/img/posts/2018/spectre-meltdown-performance/web-cpu-percent.jpg" class="magnific-popup" title="Web Server CPU Utilization">
+    <img src="/img/posts/2018/spectre-meltdown-performance/web-cpu-percent.jpg">
+</a>
 
-To make sure that this is a fair comparison, let's also take a look at the number of requests being serviced by the web tier.  While this is feeding active public traffic, our load patterns are consistent over time so there is little variance caused by workload changes.
+<a href="/img/posts/2018/spectre-meltdown-performance/web-cpu-context-switches.jpg" class="magnific-popup" title="Web Server CPU Context Switches per Secon">
+    <img src="/img/posts/2018/spectre-meltdown-performance/web-cpu-context-switches.jpg">
+</a>
+
+<a href="/img/posts/2018/spectre-meltdown-performance/web-cpu-queue.jpg" class="magnific-popup" title="Web Server CPU Queue">
+    <img src="/img/posts/2018/spectre-meltdown-performance/web-cpu-queue.jpg">
+</a>
 
 Let's also take a look at some of the other metrics on the system.
 
-!!! GRAPH - MEMORY UTILIZATION !!!
+<a href="/img/posts/2018/spectre-meltdown-performance/web-memory-utilization.jpg" class="magnific-popup" title="Web Server Memory Utilization">
+    <img src="/img/posts/2018/spectre-meltdown-performance/web-memory-utilization.jpg">
+</a>
 
-!!! GRAPH - DISK LATENCY !!!
+<a href="/img/posts/2018/spectre-meltdown-performance/web-network-utilization.jpg" class="magnific-popup" title="Web Server Network Utilization">
+    <img src="/img/posts/2018/spectre-meltdown-performance/web-network-utilization.jpg">
+</a>
 
-!!! GRAPH - NETWORK UTILIZATION !!!
+<a href="/img/posts/2018/spectre-meltdown-performance/web-disk-queue.jpg" class="magnific-popup" title="Web Server Disk Queue">
+    <img src="/img/posts/2018/spectre-meltdown-performance/web-disk-queue.jpg">
+</a>
 
 #### Redis Server Impact ####
 
 This is a bare metal Centos 7 server running on Dell R630 (13th generation) rack-mount hardware.
 
-!!! GRAPH - OPS / sec !!!
+<a href="/img/posts/2018/spectre-meltdown-performance/redis-ops.jpg" class="magnific-popup" title="Redis Operations per Second">
+    <img src="/img/posts/2018/spectre-meltdown-performance/redis-ops.jpg">
+</a>
 
-!!! GRAPH - CPU !!!
-
-!!! GRAPH - AVERAGE MS / CALL !!!
+<a href="/img/posts/2018/spectre-meltdown-performance/redis-cpu-percent.jpg" class="magnific-popup" title="Redis Server CPU Utilization">
+    <img src="/img/posts/2018/spectre-meltdown-performance/redis-cpu-percent.jpg">
+</a>
 
 ### User Experience Impact ###
 
