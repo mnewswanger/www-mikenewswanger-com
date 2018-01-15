@@ -32,8 +32,11 @@ Install-Module SpeculationControl
 
 Then run the following as a regular user account:
 ```powershell
+$OriginalExecutionPolicy = Get-ExecutionPolicy
+Set-ExecutionPolicy RemoteSigned -Scope Currentuser
 Import-Module SpeculationControl
 Get-SpeculationControlSettings
+Set-ExecutionPolicy $OriginalExecutionPolicy -Scope Currentuser
 ```
 
 The resulting output should look like this:
