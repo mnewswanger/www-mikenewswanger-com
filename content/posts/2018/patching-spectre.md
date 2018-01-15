@@ -5,11 +5,11 @@ tags: [performance, security]
 description: Patching process for Meltdown and Spectre mitigations.
 ---
 
-In order to mitigate against Meltdown, a CPU microcode update needs to be applied, which is delivered via BIOS.  MacOS updates will do this via the standard update process.  For Linux and Windows, BIOS updates will need to be run in addition to the operating system patches.  In our case, we were running 13th generation Dell servers (R630) and deployed BIOS version 2.7.0 ~~(which has since been pulled by Dell)~~. _Update (1/13/18): 2.7.0 is once again available for download, but this time with a release date of January 12._  When patching, I installed the Windows patch and BIOS update then set the registry key prior to rebooting so that the system only had to reboot once during the patching process.  It doesn't have to be done that way, but that minimized downtime for our instances.
+In order to mitigate against Meltdown, a CPU microcode update needs to be applied, which is delivered via BIOS.  MacOS updates will do this via the standard update process.  For Linux and Windows, BIOS updates will need to be run in addition to the operating system patches.  In our case, we were running 13th generation Dell servers (R630) and deployed BIOS version 2.7.0 ~~(which has since been pulled by Dell)~~. _Update (1/13/18): 2.7.0 is once again available for download, but this time with a release date of January 12._  When patching, I installed the Windows patch and staged the BIOS update then set the registry key prior to rebooting so that the system only had to reboot once during the patching process.  It doesn't have to be done that way, but that minimized downtime for our instances.
 
 ## Windows Server ##
 
-Server patches for fixing Meltdown and known Spectra variants are available on <a href="https://support.microsoft.com/en-us/help/4072698/windows-server-guidance-to-protect-against-the-speculative-execution" target="_blank" rel="nofollow">Microsoft's Meltdown & Spectre mitigation instructions</a> under the "Recommended Actions" heading.
+Server patches for fixing Meltdown and known Spectre variants are available on <a href="https://support.microsoft.com/en-us/help/4072698/windows-server-guidance-to-protect-against-the-speculative-execution" target="_blank" rel="nofollow">Microsoft's Meltdown & Spectre mitigation instructions</a> under the "Recommended Actions" heading.
 
 After the server is patched, the fixes must be manually enabled.  Note: Windows desktop operating systems enable by default after the patch is installed.
 ```
