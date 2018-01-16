@@ -7,7 +7,7 @@ description: Overview of the implementation process and performance hits of Melt
 
 Announced early in the year, Meltdown and Spectre processor vulnerabilities affect nearly all servers and consumer PCs.  As of now, attacks are only proof-of-concept, and no known exploits are in the wild.  At Stack Overflow, we've done some testing on the impact of software mitigations designed to protect against these vulnerabilities.  Software patches are available for Meltdown and currently known exploit vectors of Spectre, and we'll take a look at their impact on system performance below.  If you're already familiar with the vulnerabilities and how to patch them, jump down to the <a href="#impact">Impact Section</a>.
 
-Two of the interesting things about this particular set of vulnerabilities are that 1) there's a significant performance hit to enable mitigations for them and 2) it's been very difficult for hardware and software vendors to perpare and deploy mitigations.  While the details of these vulnerabilites have only been public since early 2018, <a href="https://googleprojectzero.blogspot.co.at/2018/01/reading-privileged-memory-with-side.html" target="_blank" rel="nofollow">Google's Project Zero initiative discovered them in July 2017</a>, allowing core software vendors six months to prepare mitigations.  Mitigation of the vulnerabilities also require both processor microcode update (BIOS) and an operating system patch.
+Two of the interesting things about this particular set of vulnerabilities are that 1) there's a significant performance hit to enable mitigations for them and 2) it's been very difficult for hardware and software vendors to prepare and deploy mitigations.  While the details of these vulnerabilites have only been public since early 2018, <a href="https://googleprojectzero.blogspot.co.at/2018/01/reading-privileged-memory-with-side.html" target="_blank" rel="nofollow">Google's Project Zero initiative discovered them in July 2017</a>, allowing core software vendors six months to prepare mitigations.  Mitigation of the vulnerabilities also require both processor microcode update (BIOS) and an operating system patch.
 
 For details about our patch processes against the vulnerabilies, <a href="/posts/2018/patching-spectre/">see this page</a>.  
 
@@ -25,7 +25,7 @@ In a very simplified explanation: in order to boost performance, most modern pro
 
 ## Impact ##
 
-To say performance hits were noticable on our servers would be an understatement.  This is evident in both server performance metrics and service load times.  I'll break down details of our performance hits during our first steps of canary testing below.
+To say performance hits were noticeable on our servers would be an understatement.  This is evident in both server performance metrics and service load times.  I'll break down details of our performance hits during our first steps of canary testing below.
 
 For all of the graphs below, the timeframe is a one hour sampling from early afternoon traffic (17:30UTC - 18:30UTC) against the servers after the patch compared to the same time period one day earlier.  To keep graphs consistent, all metrics prior to patching are shown in green and all metrics after patching in yellow.
 
@@ -51,9 +51,9 @@ Request loads are very close between the two time periods--within 1% of each oth
     <img src="/img/posts/2018/spectre-meltdown-performance/web-cpu-percent.jpg">
 </a>
 
-We can see that there is a significant jump in CPU active time after applying the patch.  The CPU utilization increased from 9% average to 19% average--an increase of 111% utilization across that window.  The maximum CPU percent increased even more significantly from 24% to 66%--an increase of 175%.
+We can see that there is a significant jump in CPU active time after applying the patch.  The CPU utilization increased from 9% average to 19% average--an increase of 111% utilization across that window.  The maximum CPU percentage increased even more significantly from 24% to 66%--an increase of 175%.
 
-Utilization percent doesn't tell the whole story, so let's take a look at the CPU queue length and context switches:
+Utilization percentage doesn't tell the whole story, so let's take a look at the CPU queue length and context switches:
 
 <a href="/img/posts/2018/spectre-meltdown-performance/web-cpu-queue.jpg" class="magnific-popup" title="Web Server CPU Queue">
     <img src="/img/posts/2018/spectre-meltdown-performance/web-cpu-queue.jpg">
@@ -79,7 +79,7 @@ Memory usage holds even here, which makes sense as none of the server's workload
     <img src="/img/posts/2018/spectre-meltdown-performance/web-network-utilization.jpg">
 </a>
 
-Network utilization is up slightly, but on bonded 10 gigabit network, the traffic is less than 1% utilization.
+Network utilization is up slightly, but on a bonded 10 gigabit network, the traffic is less than 1% utilization.
 
 <a href="/img/posts/2018/spectre-meltdown-performance/web-disk-queue.jpg" class="magnific-popup" title="Web Server Disk Queue">
     <img src="/img/posts/2018/spectre-meltdown-performance/web-disk-queue.jpg">
@@ -103,7 +103,7 @@ Now that we've established that the workload is consistent between the two captu
     <img src="/img/posts/2018/spectre-meltdown-performance/redis-cpu-percent.jpg">
 </a>
 
-The CPU graph doesn't tell the whole story though.  Given the extremely low CPU load on the box, even a mmoderately high percentage jump in relative processor resource consumption is hard to see.  What can be seen however is when testing synthetic workloads against the server--such as running redis' internal benchmark tool.  Doing so shows that the system is capable of 145k operations per second unpatched but reduces to about 95k operations when patched.
+The CPU graph doesn't tell the whole story though.  Given the extremely low CPU load on the box, even a moderately high percentage jump in relative processor resource consumption is hard to see.  What can be seen however is when testing synthetic workloads against the server--such as running redis' internal benchmark tool.  Doing so shows that the system is capable of 145k operations per second unpatched but reduces to about 95k operations when patched.
 
 ### User Experience Impact ###
 
@@ -115,7 +115,7 @@ Here's what happened to our average load times after enabling mitigations.
 
 Question view pages give us a good basis for comparison as each page has a very similar and consistent workload associated with it.  For comparison purposes, I've also included averages from 2017 and 2016 for historical comparison.
 
-SQL, Redis, HTTP, Tag Engine, and Elastic times are all averaged across the number of requests made to each service.  Each request could have zero or more calls to each service.
+SQL, Redis, HTTP, Tag Engine, and ElasticSearch times are all averaged across the number of requests made to each service.  Each request could have zero or more calls to each service.
 
 Date | Time to Response | .Net Time | SQL Time | Redis Time
 --- | --- | --- | --- | ---
@@ -140,7 +140,7 @@ Date | Time to Response | .Net Time | SQL Time | Redis Time
 2018 (patched) | 20ms | 13.63ms | 830us | 49us
 2018 | 17ms | 12.29ms | 692us | 43us
 
-Date | HTTP Call Time | Tag Engine Time | Elastic Time
+Date | HTTP Call Time | Tag Engine Time | ElasticSearch Time
 --- | --- | --- | ---
 2018 (patched) | 29.14ms | 5.71ms | 18.07ms
 2018 | 25.90ms | 4.46ms | 13.93ms
@@ -155,7 +155,7 @@ SQL Time | 692us | 830us | 20%
 Redis Time | 43us | 49us | 14%
 HTTP Call Time | 25.90ms | 29.14ms | 13%
 Tag Engine Time | 4.46ms | 5.71ms | 28%
-Elastic Time | 13.93ms | 18.07ms | 30%
+ElasticSearch Time | 13.93ms | 18.07ms | 30%
 
 While the percentages vary slightly between the two data sets, one thing that is consistent is that all metrics increased.
 
@@ -183,7 +183,7 @@ Jumping back to the redis server referenced above again, we can see a slightly d
 
 Because of the difficulty of exploitation at present and the extreme performance hits involved with implementing these mitigations, teams should carefully weigh whether accepting the performance hits of enabling the mitigations outweighs the risk of leaving the mitigations disabled.  That said, performance impact varies greatly between systems and workloads, so testing the impact against your workloads is recommended.
 
-On servers running trusted and patched software, enabling the mitigations may not be necessary.  Microsoft recommends against enabling the mitigations on SQL Servers that are running on bare metal without CLR enabled.  Other performance-oriented software may also put out similar recommendations going forward.
+On servers running trusted and patched software, enabling the mitigations may not be necessary.  ~~<a href="https://support.microsoft.com/en-us/help/4073225/guidance-for-sql-server" target="_blank" rel="nofollow">Microsoft recommends against enabling the mitigations on SQL Servers that are running on bare metal only trusted code</a>.~~ _Microsoft has updated their recommendations and now recommends enabling patches for Meltdown but maintains that Spectre protections don't need to be enabled if you're running without untrusted code._   Other performance-oriented software may also put out similar recommendations going forward.
 
 ### Conclusion ###
 
@@ -200,4 +200,5 @@ It's important to remember that system-level performance metrics won't tell the 
 * <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5753" target="_blank" rel="nofollow">Spectre (Variant 2) CVE</a>
 * <a href="https://newsroom.intel.com/wp-content/uploads/sites/11/2018/01/Intel-Analysis-of-Speculative-Execution-Side-Channels.pdf" target="_blank" rel="nofollow">Intel Analysis of Meltdown</a>
 * <a href="https://support.microsoft.com/en-us/help/4072698/windows-server-guidance-to-protect-against-the-speculative-execution" target="_blank" rel="nofollow">Microsoft Patching Guide for Spectre & Meltdown</a>
+* <a href="https://support.microsoft.com/en-us/help/4073225/guidance-for-sql-server" target="_blank" rel="nofollow">Microsoft Recommendations Regarding SQL Server</a>
 * <a href="https://danluu.com/branch-prediction/" target="_blank" rel="nofollow">Explanation of Branch Prediction</a>
