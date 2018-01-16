@@ -11,8 +11,8 @@ div.post-about {
 }
 
 div.post-about img.headshot {
-    background-color: #bbbbbb;
-    border: 1px solid #dddddd;
+    background-color: #bbb;
+    border: 1px solid #ddd;
     border-radius: 64px;
     float: left;
     height: 105px;
@@ -35,4 +35,15 @@ div.post-about div.profile h3 {
 
 div.blog-post-content img {
     width: 100%;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+table th {
+    padding: 2px;
+    border-bottom: 1px solid #ddd;
 }
