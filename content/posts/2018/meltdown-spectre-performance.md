@@ -1,7 +1,6 @@
 ---
 title: Meltdown & Spectre Performance Impact at Stack Overflow
-date: 2018-01-13T09:00:00-05:00
-draft: true
+date: 2018-01-15T20:00:00-05:00
 tags: [performance, security]
 description: Overview of the implementation process and performance hits of Meltdown and Spectre Patches on Stack Overflow's Web Servers.
 ---
