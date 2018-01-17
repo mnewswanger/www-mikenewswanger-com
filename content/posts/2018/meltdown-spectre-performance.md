@@ -33,7 +33,7 @@ Because of the amount of traffic that we get continuously to our websites, there
 
 ### Server Resource Utilization ###
 
-Server performance impact was immediately visible after patching our test servers.  The most affected and most apparent resource on our patched servers is the CPU.  Increasing load on the CPU however can also increase context switching and waits for other resources--such as network and disk.
+Server performance impact was immediately visible after patching our test servers.  The most affected and most apparent resource on our patched servers is the CPU.  Increasing load on the CPU, however, can also increase context switching and waits for other resources--such as network and disk.
 
 #### Web Server ####
 
@@ -103,7 +103,7 @@ Now that we've established that the workload is consistent between the two captu
     <img src="/img/posts/2018/spectre-meltdown-performance/redis-cpu-percent.jpg">
 </a>
 
-The CPU graph doesn't tell the whole story though.  Given the extremely low CPU load on the box, even a moderately high percentage jump in relative processor resource consumption is hard to see.  What can be seen however is when testing synthetic workloads against the server--such as running redis' internal benchmark tool.  Doing so shows that the system is capable of 145k operations per second unpatched but reduces to about 95k operations when patched.
+The CPU graph doesn't tell the whole story though.  Given the extremely low CPU load on the box, even a moderately high percentage jump in relative processor resource consumption is hard to see.  What can be seen, however, is when testing synthetic workloads against the server--such as running redis' internal benchmark tool.  Doing so shows that the system is capable of 145k operations per second unpatched but reduces to about 95k operations when patched.
 
 ### User Experience Impact ###
 
@@ -115,7 +115,7 @@ Here's what happened to our average load times after enabling mitigations.
 
 Question view pages give us a good basis for comparison as each page has a very similar and consistent workload associated with it.  For comparison purposes, I've also included averages from 2017 and 2016 for historical comparison.
 
-SQL, Redis, HTTP, Tag Engine, and ElasticSearch times are all averaged across the number of requests made to each service.  Each request could have zero or more calls to each service.
+SQL, Redis, HTTP, Tag Engine, and Elasticsearch times are all averaged across the number of requests made to each service.  Each request could have zero or more calls to each service.
 
 Date | Time to Response | .Net Time | SQL Time | Redis Time
 --- | --- | --- | --- | ---
@@ -140,7 +140,7 @@ Date | Time to Response | .Net Time | SQL Time | Redis Time
 2018 (patched) | 20ms | 13.63ms | 830us | 49us
 2018 | 17ms | 12.29ms | 692us | 43us
 
-Date | HTTP Call Time | Tag Engine Time | ElasticSearch Time
+Date | HTTP Call Time | Tag Engine Time | Elasticsearch Time
 --- | --- | --- | ---
 2018 (patched) | 29.14ms | 5.71ms | 18.07ms
 2018 | 25.90ms | 4.46ms | 13.93ms
@@ -155,7 +155,7 @@ SQL Time | 692us | 830us | 20%
 Redis Time | 43us | 49us | 14%
 HTTP Call Time | 25.90ms | 29.14ms | 13%
 Tag Engine Time | 4.46ms | 5.71ms | 28%
-ElasticSearch Time | 13.93ms | 18.07ms | 30%
+Elasticsearch Time | 13.93ms | 18.07ms | 30%
 
 While the percentages vary slightly between the two data sets, one thing that is consistent is that all metrics increased.
 
