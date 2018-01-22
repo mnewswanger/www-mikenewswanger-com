@@ -59,84 +59,85 @@
         </section>
 
         <footer id="footer" class="dark">
-                <div class="primary-footer">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <h5 class="text-uppercase">Recent Blog Posts</h5>
-                                <ul class="f-list">
-                                {{ $section := where .Site.RegularPages "Section" "eq" "posts" }}
-                                {{ $n_posts := $.Param "recent_posts_number" | default 3 }}
-                                
-                                {{ range (first $n_posts $section) }}
-                                <li><a href="{{ .URL }}">{{ .Title }}</a></li>
-                                {{ end }}
-                                <li><a href="/posts">See more posts</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-6">
-                                <h5 class="text-uppercase">Open Source Projects</h5>
-                                <ul class="f-list">
-                                    <li><a href="https://github.com/mnewswanger/docker-automatic-build">Docker Automatic Build Tool</a></li>
-                                    <li><a href="https://github.com/mnewswanger/docker-registry-ui">Docker Registry UI</a></li>
-                                    <li><a href="https://github.com/mnewswanger/kubesolidator">Kubesolidator</a></li>
-                                </ul>
+            <div class="primary-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h5 class="text-uppercase">Recent Blog Posts</h5>
+                            <ul class="f-list">
+                            {{ $section := where .Site.RegularPages "Section" "eq" "posts" }}
+                            {{ $n_posts := $.Param "recent_posts_number" | default 3 }}
+                            
+                            {{ range (first $n_posts $section) }}
+                            <li><a href="{{ .URL }}">{{ .Title }}</a></li>
+                            {{ end }}
+                            <li><a href="/posts">See more posts</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <h5 class="text-uppercase">Open Source Projects</h5>
+                            <ul class="f-list">
+                                <li><a href="https://github.com/mnewswanger/container-factory">Container Factory</a></li>
+                                <li><a href="https://github.com/mnewswanger/docker-registry-ui">Docker Registry UI</a></li>
+                                <li><a href="https://go.mikenewswanger.com/kubesolidator">Kubesolidator</a></li>
+                                <li><a href="https://github.com/mnewswanger/proxy-konfigurator">Proxy Konfigurator</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="secondary-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <span class="m-top-10">Copyright &copy;{{ now.Format "2006" }} Mike Newswanger | All Rights Reserved</span>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="social-link circle pull-right">
+                                <a href="https://github.com/mnewswanger?tab=repositories"><i class="fa fa-github"></i></a>
+                                <a href="https://stackoverflow.com/users/8407307/mike-newswanger"><i class="fa fa-stack-overflow"></i></a>
+                                <a href="https://stackexchange.com/users/11470259/mike-newswanger"><i class="fa fa-stack-exchange"></i></a>
+                                <a href="https://twitter.com/mnewswanger"><i class="fa fa-twitter"></i></a>
+                                <a href="https://www.linkedin.com/in/mikenewswanger/"><i class="fa fa-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-    
-                <div class="secondary-footer">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <span class="m-top-10">Copyright &copy;{{ now.Format "2006" }} Mike Newswanger | All Rights Reserved</span>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="social-link circle pull-right">
-                                    <a href="https://github.com/mnewswanger?tab=repositories"><i class="fa fa-github"></i></a>
-                                    <a href="https://stackoverflow.com/users/8407307/mike-newswanger"><i class="fa fa-stack-overflow"></i></a>
-                                    <a href="https://stackexchange.com/users/11470259/mike-newswanger"><i class="fa fa-stack-exchange"></i></a>
-                                    <a href="https://twitter.com/mnewswanger"><i class="fa fa-twitter"></i></a>
-                                    <a href="https://www.linkedin.com/in/mikenewswanger/"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </div>
-        <script src="/js/modernizr/modernizr.js"></script>
-        <script src="/js/jquery/jquery-1.10.2.min.js"></script>
-        <script src="/js/bootstrap/bootstrap.min.js"></script>
-        <script src="/js/flex-slider/jquery.flexslider-min.js"></script>
-        <script src="/js/highlight.min.js"></script>
-        <script src="/js/images-loaded/imagesloaded.js"></script>
-        <script src="/js/isotope/jquery.isotope.js"></script>
-        <script src="/js/magnific-popup/jquery.magnific-popup.min.js"></script>
-        <script src="/js/menuzord/menuzord.js"></script>
-        <script src="/js/nav/jquery.nav.js"></script>
-        <script src="/js/parallax-js/parallax.min.js"></script>
-        <script src="/js/smooth/smooth.js"></script>
-        <script src="/js/sticky/jquery.sticky.min.js"></script>
-        <script src="/js/touchspin/touchspin.js"></script>
-        <script src="/js/typist/typist.js"></script>
-        <script src="/js/visible/visible.js"></script>
-        <script src="/js/scripts.min.js"></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-62766896-1');
+            </div>
+        </footer>
+    </div>
+    <script src="/js/modernizr/modernizr.js"></script>
+    <script src="/js/jquery/jquery-1.10.2.min.js"></script>
+    <script src="/js/bootstrap/bootstrap.min.js"></script>
+    <script src="/js/flex-slider/jquery.flexslider-min.js"></script>
+    <script src="/js/highlight.min.js"></script>
+    <script src="/js/images-loaded/imagesloaded.js"></script>
+    <script src="/js/isotope/jquery.isotope.js"></script>
+    <script src="/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="/js/menuzord/menuzord.js"></script>
+    <script src="/js/nav/jquery.nav.js"></script>
+    <script src="/js/parallax-js/parallax.min.js"></script>
+    <script src="/js/smooth/smooth.js"></script>
+    <script src="/js/sticky/jquery.sticky.min.js"></script>
+    <script src="/js/touchspin/touchspin.js"></script>
+    <script src="/js/typist/typist.js"></script>
+    <script src="/js/visible/visible.js"></script>
+    <script src="/js/scripts.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-62766896-1');
 
-            hljs.initHighlightingOnLoad();
+        hljs.initHighlightingOnLoad();
 
-            $('.magnific-popup').magnificPopup({
-                type: 'image'
-            });
-        </script>
-    </body>
-    
-    </html>
+        $('.magnific-popup').magnificPopup({
+            type: 'image'
+        });
+    </script>
+</body>
+
+</html>
     
