@@ -1,5 +1,5 @@
 ---
-title: "Home Lab - Part 1: The Hardware"
+title: "Home Lab v3 - Part 1: The Hardware"
 date: 2018-02-12T20:00:00-05:00
 tags: [home lab]
 draft: true
@@ -8,7 +8,7 @@ description: "Part 1 of the Home Lab environment buildout covering the hardware 
 
 I do a lot of my development, testing, and infrastructure automation using my home lab.  It gives me a place to try new things with a lot more capacity than my Macbook provides and allows for more hardware customization as well.
 
-If you're curious about the history of my home lab, you can [see the log here](/posts/home-lab-changelog/)
+If you're curious about the history of my home lab, you can [see the log here](/posts/home-lab-changelog/).
 
 ## Goals ##
 
@@ -22,11 +22,11 @@ While my previous nodes performed adequately, when updating the hardware in the 
 
 #### Cost ####
 
-One of the primary goals with the hardware revamp is to save on recurring costs, so keeping cost reasonable for the actual hardware also needs to be taken into account.  This also correlates well with the power consumption goals as the highest end processors (Intel i9 and high core count Xeons and AMD's Threadrippers) are both very expensive and consume a lot of power.
+One of the primary goals with the hardware revamp is to save on recurring costs, so keeping cost reasonable for the actual hardware also needs to be taken into account.  This also correlates well with the power consumption goals as the highest end processors (Intel's i9 and high core count Xeon lineups and AMD's Threadripper and Epyc lineups) are both very expensive and consume a lot of power.
 
 #### Resilience ####
 
-I want as few single points of failure as is reasonably attainable.  This very much clashes with the cost and power consumption goals--putting in redundant switching requires buying and powering a second switch--and in most of these cases, the decisions favor lower cost and power consumption.
+I want as few single points of failure as is reasonably attainable.  This very much clashes with the cost and power consumption goals--providing redundant switching requires buying and powering a second switch--and in most of these cases, the decisions favor lower cost and power consumption.  In these cases, I want to make it as easy as possible to replace the single points of failure in the ifrastructure if needed.
 
 ## Hardware Selection ##
 
@@ -48,17 +48,17 @@ _My initial build list was going to use a Corsair Carbide Spec-01 case and H100i
 
 Currently, the 8700Ks are running at factory clocks, but I wanted to get them over the 8600K for the additional clock speed and hyperthreading and the 8700 for the additional clock speeds and sustained boost speeds.  While the max draw on the 8700K is higher than the other two current Coffee Lake hex-core offerings form Intel, the power draw at idle is comparable to the others.  AMD currently doesn't have anything that performs at the levels of the 8700K (particularly single-thread performance) at similar power consumption.
 
-While the Crucial memory isn't the fastest on the market, it's very reliable--which to me is far more important.
+While the Crucial memory isn't the fastest on the market, it's very reliable--which to me is far more important.  For my lab environment, I don't need ECC in the memory, so I can use a consumer targeted processor with non-ECC memory.
 
-The servers have a decent amount of available storage to start, and the 750D case provides tons of room for additional storage - 4x 2.5" trays and 6x 3.5" trays in addition to the two M.2 ports available on the motherboard.  I'll be spanning the storage across multiple nodes via software to eliminate the single point of failure I had with the FreeNAS server I was running in the previous lab configuration.
+The server configurations have a decent amount of available storage to start, and the 750D case provides tons of room for additional storage - 4x 2.5" trays and 6x 3.5" trays in addition to the two M.2 ports available on the motherboard.  I'll be spanning the available storage across multiple nodes via software to eliminate the single point of failure I had with the FreeNAS server I was running in the previous lab configuration.
 
 #### Networking ####
 
-##### Ubiquiti Unified Security Gateway & Unifi 24 Port Switch #####
+##### Ubiquiti Unifi Security Gateway & Unifi 24 Port Switch #####
 
-Both the USG and Switch fall under the Ubiquit umbrella and are managed using the Unifi Controller software, so it can share networks and objects easily between the entire network stack, and they're low power and quiet.
+Both the USG and Switch fall under the Ubiquiti umbrella and are managed using the Unifi Controller software, so it can share networks and objects easily between the entire network stack, and they're low power and quiet.  Backing up configurations is easy, and replacing failed hardware is simple.
 
-The USG replaced the previous pfSense failover pair I had running in VMware.  While this worked very well, it had two major issues.  First, it meant that my entire network was dependent on my lab environment for availability.  Second, configuring and updating the failover node was difficult as my ISP only gives me one IP address and therefore only one node can be connected to the internet at any point in time (later pfSense releases removed offline updating).
+The USG replaced the previous pfSense failover pair I had running in VMware.  While this worked very well, it had two major issues.  First, it meant that my entire network was dependent on my lab environment for availability.  Second, configuring and updating the failover node was difficult as my ISP only gives me one IP address and therefore only one node can be connected to the internet at any point in time (later pfSense releases removed offline updating).  Using the USG makes management and maintenance much simpler.
 
 ## Results ##
 
@@ -70,6 +70,6 @@ All in, each build cost about $1400 including tax, but I already had an SSD and 
 
 By having three nodes, I can run clustered services with N+1 redundancy; two nodes can lead to split-brain so a third witness is necessary in most HA clustered scenarios.  This covers the levels of resiliency I'm looking for in my lab.
 
-The build hits all of my goals for my intended use, so I'm happy with the results.
+The build hits all of my goals for my intended use, so I'm happy with the results.  As an added bonus, the builds look really good as well with well routed and out of sight cabling and a clean, black-and-white look.
 
-Next in the series: [the build process](/posts/2018/home-lab-build/)
+The next post in the series covers [the build process](/posts/2018/home-lab-build/).
