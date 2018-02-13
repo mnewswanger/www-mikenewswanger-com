@@ -3,7 +3,6 @@ title: "Home Lab - Changelog"
 date: 2018-02-12T19:00:00-05:00
 tags: [home lab]
 description: "Part 1 of the Home Lab environment buildout covering the hardware selection and build process."
-draft: true
 ---
 
 This tracks the progression my home lab over time.

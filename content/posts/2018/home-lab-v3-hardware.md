@@ -2,7 +2,6 @@
 title: "Home Lab v3 - Part 1: The Hardware"
 date: 2018-02-12T20:00:00-05:00
 tags: [home lab]
-draft: true
 description: "Part 1 of the Home Lab environment buildout covering the hardware selection."
 ---
 

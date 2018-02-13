@@ -3,7 +3,6 @@ title: "Home Lab v3 - Part 2: The Build Process"
 date: 2018-02-12T21:00:00-05:00
 tags: [home lab]
 description: "Part 2 of the Home Lab environment buildout covering the build process for the compute nodes."
-draft: true
 ---
 
 _I've never built a computer before._ I figured now is as good a time as any to give it a shot.  And why not do three while I'm at it for my new home lab.
