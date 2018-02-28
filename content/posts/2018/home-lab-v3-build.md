@@ -23,7 +23,7 @@ First thing I did was plan out my list of hardware:
 
 \*_Almost all of it worked together--all of the components were compatible, but the liquid cooling radiator didn't fit the original case._
 
-If you're curious as to why I chose the hardware I did, [see the previous post in the series](/posts/2018/home-lab-hardware/).
+If you're curious as to why I chose the hardware I did, [see the previous post in the series](/posts/2018/home-lab-v3-hardware/).
 
 I got everything from Micro Center--they had all of the components that I wanted in stock and had solid pricing (most of which was cheaper than online retailers).
 

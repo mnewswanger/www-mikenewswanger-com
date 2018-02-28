@@ -108,7 +108,7 @@ This version was a major overhaul: I replaced the two server setup with four: th
 
 ### Version 3 ###
 
-[See the details here](/posts/2018/home-v3-lab-hardware/)
+[See the details here](/posts/2018/home-lab-v3-hardware/)
 
 This was the largest change of all of the revisions: I moved to three compute nodes, each with local storage and migrated from VMware to Hyper-V for the bare metal hypervisor, and I migrated from a datacenter switch to Ubiquiti products.
 

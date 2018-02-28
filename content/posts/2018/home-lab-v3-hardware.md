@@ -71,4 +71,4 @@ By having three nodes, I can run clustered services with N+1 redundancy; two nod
 
 The build hits all of my goals for my intended use, so I'm happy with the results.  As an added bonus, the builds look really good as well with well routed and out of sight cabling and a clean, black-and-white look.
 
-The next post in the series covers [the build process](/posts/2018/home-lab-build/).
+The next post in the series covers [the build process](/posts/2018/home-lab-v3-build/).
