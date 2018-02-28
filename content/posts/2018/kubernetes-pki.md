@@ -1,8 +1,8 @@
 ---
 title: "Building a Secure Public Key Infrastructure for Kubernetes"
-date: 2018-02-27T21:00:00-05:00
-tags: [infrastructure, security]
-description: "Explore the CFSSL tool and use it to create a PKI that is secure, manageable, and maintainable."
+date: 2018-02-28T10:00:00-05:00
+tags: [infrastructure, kubernetes, security]
+description: "Explore the CFSSL tool and use it to create a PKI that is secure, manageable, and maintainable for Kubernetes infrastructure."
 ---
 
 The target for this implementation is primarily to support Kubernetes infrastructure.  Before getting into the specifics of the infrastructure setup and server configurations, I'll go over project goals for this implementation along with known limitations and how [CFSSL](https://github.com/cloudflare/cfssl)--a tool created by CloudFlare for generating and signing certificates--is designed.
