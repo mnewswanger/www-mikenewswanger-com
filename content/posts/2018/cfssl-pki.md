@@ -1,17 +1,17 @@
 ---
-title: "Building a PKI with CFSSL"
+title: "Building a Secure Public Key Infrastructure for Kubernetes"
 date: 2018-02-27T21:00:00-05:00
 tags: [infrastructure, security]
 description: "Explore the CFSSL tool and use it to create a PKI that is secure, manageable, and maintainable."
 ---
 
-The target for this implementation is primarily to support Kubernetes infrastructure.  Before getting into the specifics of the infrastructure setup and server configurations, I'll go over project goals for the implementation and known limitations and how CFSSL is designed.
+The target for this implementation is primarily to support Kubernetes infrastructure.  Before getting into the specifics of the infrastructure setup and server configurations, I'll go over project goals for this implementation along with known limitations and how [CFSSL](https://github.com/cloudflare/cfssl)--a tool created by CloudFlare for generating and signing certificates--is designed.
 
 ## Goals ##
 
 ### Secure ###
 
-First and foremost - this is a PKI.  We need it to be secure.  If the PKI itself can't be trusted, then nothing depending on the PKI can be trusted.  There are a few specific goals here:
+First and foremost - this is a [PKI](https://en.wikipedia.org/wiki/Public_key_infrastructure).  We need it to be secure.  If the PKI itself can't be trusted, then nothing depending on the PKI can be trusted.  There are a few specific goals here:
 
 #### Keys must never leave their hosts ####
 
@@ -42,7 +42,7 @@ Because the CA can be easily blown away and recreated, the CA isn't implementing
 
 The CA server also isn't set up to provide OCSP (Online Certificate Status Protocol) to verify certificate status real-time.
 
-Both CRL and OCSP can be implemented using the tools below, but I'm not going to cover it in this post.
+_Both CRL and OCSP can be implemented using the tools below, but I'm not going to cover it in this post._
 
 ## CFSSL ##
 
