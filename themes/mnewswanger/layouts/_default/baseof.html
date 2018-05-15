@@ -67,7 +67,7 @@
                             <ul class="f-list">
                             {{ $section := where .Site.RegularPages "Section" "eq" "posts" }}
                             {{ $n_posts := $.Param "recent_posts_number" | default 3 }}
-                            
+
                             {{ range (first $n_posts $section) }}
                             <li><a href="{{ .URL }}">{{ .Title }}</a></li>
                             {{ end }}
@@ -80,7 +80,7 @@
                                 <li><a href="https://github.com/mnewswanger/container-factory">Container Factory</a></li>
                                 <li><a href="https://github.com/mnewswanger/docker-registry-ui">Docker Registry UI</a></li>
                                 <li><a href="https://go.mikenewswanger.com/kubesolidator">Kubesolidator</a></li>
-                                <li><a href="https://github.com/mnewswanger/proxy-konfigurator">Proxy Konfigurator</a></li>
+                                <li><a href="https://github.com/stackexchange/haproxy-kubefigurator">Haproxy Kubefigurator</a></li>
                             </ul>
                         </div>
                     </div>
@@ -140,4 +140,3 @@
 </body>
 
 </html>
-    

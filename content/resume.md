@@ -143,21 +143,21 @@ description: ""
                 <div class="col-md-6 ">
                     <div class="featured-item career-box text-center">
                         <div class="title text-uppercase">
-                            <h4>Guetzli Image Optimization</h4>
+                            <h4>On-Premises Kubernetes Deployment (2018)</h4>
                         </div>
                         <div class="desc">
-                            <p>Designed a distributed system to bulk-process over nine million images on our web properties.  Utilized Google Container Engine to distribute processing across 3,600 containers across three regions, and maintained an average of over 99% CPU utilization, allowing it to complete nearly two years’ processor time in under 3 days.  Wrote a high-performance queueing system, download queue, worker processes, and downloaders and distributed via containers both on-premise and in cloud infrastructure.  This reduced our image sizes by about 80% on average.</p>
-                            <p>Golang - Kubernetes - Google Cloud</p>
+                            <p>Created Ansible playbooks and go tooling to manage on-premises Kubernetes clusters.  Clusters are deployed with full encryption and authentication--TLS server identification, TLS client authentication, and Kubernetes RBAC permissions.  Minimal configuration is needed to alter an existing cluster or add another to any environment.  Haproxy Kubefigurator tool is used to configure load balancers to expose services outside the cluster.</p>
+                            <p>Ansible - Golang - Bare Metal</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 ">
                     <div class="featured-item career-box text-center">
                         <div class="title text-uppercase">
-                            <h4>DDE-CTL</h4>
+                            <h4>Docker Development Environment (2016)</h4>
                         </div>
                         <div class="desc">
-                            <p>Developed a system utilizing Docker for developers to build and scale local development environments.  It provides easier and faster deployment, lower resource consumption while running, and greater consistency between developers than previously used solutions.  It was designed with scalability in mind and is easy to extend to handle additional projects and increases in project scope.  Its artifacts are human readable and can be modified by the developers to fit their needs.</p>
+                            <p>Designed and developed a local, synchronous orchestration system for containers allowing developers to quickly build and scale local development environments.  It provides faster, more consistent deployments, lower resource overhead, and greater consistency between developers than previously used solutions.  It was designed with scalability in mind and is easy to extend to handle additional projects and increases in project scope.  Its artifacts are human readable and can be modified by the developers to fit their needs.</p>
                             <p>Golang - Docker</p>
                         </div>
                     </div>
@@ -167,7 +167,7 @@ description: ""
                 <div class="col-md-6 ">
                     <div class="featured-item career-box text-center">
                         <div class="title text-uppercase">
-                            <h4>Docker Registry Web UI</h4>
+                            <h4>Docker Registry Web UI (2016)</h4>
                         </div>
                         <div class="desc">
                             <p>Used React to create an interface to view the contents of an internally hosted Docker registry.  It organizes and displays all images and links to internal documentation for the images.</p>
@@ -178,11 +178,11 @@ description: ""
                 <div class="col-md-6 ">
                     <div class="featured-item career-box text-center">
                         <div class="title text-uppercase">
-                            <h4>Docker Automatic Build Tool</h4>
+                            <h4>Container Factory (2016)</h4>
                         </div>
                         <div class="desc">
                             <p>Developed a tool to hierarchically build Docker images.  It allows for the use of inheritance, reduces code duplication, and maps build dependencies while providing a consistent build experience for all users.</p>
-                            <p>Golang - Docker Cloud</p>
+                            <p>Golang - Docker</p>
                         </div>
                     </div>
                 </div>
@@ -191,18 +191,18 @@ description: ""
                 <div class="col-md-6 ">
                     <div class="featured-item career-box text-center">
                         <div class="title text-uppercase">
-                            <h4>External DNS Update Tool</h4>
+                            <h4>Guetzli Image Optimization (2017)</h4>
                         </div>
                         <div class="desc">
-                            <p>Created a CLI to use for public DNS records.  It validates against previously common mistakes and provides a desired-state driven configuration which enables the use of version control.</p>
-                            <p>PHP</p>
+                            <p>Designed a distributed system to bulk-process over nine million images on our web properties.  Utilized Google Container Engine to distribute processing across 3,600 containers across three regions, and maintained an average of over 99% CPU utilization, allowing it to complete nearly two years’ processor time in under 3 days.  Wrote a high-performance queueing system, download queue, worker processes, and downloaders and distributed via containers both on-premise and in cloud infrastructure.  This reduced our image sizes by about 80% on average.</p>
+                            <p>Golang - Kubernetes - Google Cloud</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 ">
                     <div class="featured-item career-box text-center">
                         <div class="title text-uppercase">
-                            <h4>SQL Server High-Availability Cluster</h4>
+                            <h4>SQL Server High-Availability Cluster (2012)</h4>
                         </div>
                         <div class="desc">
                             <p>Utilized SQL Server 2012 RC releases to test and configure a Failover Cluster supporting AlwaysOn technology, which was put into production at General Availability release.  It solved read / write contention issues by splitting workloads based on intent and purpose, significantly increasing performance.</p>
@@ -277,7 +277,7 @@ description: ""
                     <li>MySQL / MariaDB</li>
                     <li>Postgres</li>
                     <li>Memcache</li>
-                    <li>ElasticSearch</li>
+                    <li>Elasticsearch</li>
                     <li>MongoDB</li>
                 </ul>
             </div>
@@ -290,12 +290,21 @@ description: ""
             </div>
             <dl class="accordion time-line">
                 <dt>
-                    <a>Stack Overflow - <em>August 2017 - Present</em></a>
+                    <a>Elastic - <em>May 2018 - Present</em></a>
                 </dt>
                 <dd>
                     <div>
-                        <strong>Site Reliability Engineer</strong> - <em>August 2017 - Present</em>
-                        <p>Ensure that all supporting services for Stack Overflow properties are online, performant, and secure.  Develop and implmement tooling and processes to manage large sets of infrastructure effectively with a small team.</p>
+                        <strong>Cloud Engineer</strong> - <em>May 2018 - Present</em>
+                        <p>Develop products to support Elastic SAAS offerings on multiple cloud platforms.</p>
+                    </div>
+                </dd>
+                <dt>
+                    <a>Stack Overflow - <em>August 2017 - May 2018</em></a>
+                </dt>
+                <dd>
+                    <div>
+                        <strong>Site Reliability Engineer</strong> - <em>August 2017 - May 2018</em>
+                        <p>Ensure that all supporting services for Stack Overflow properties are online, performant, and secure.  Develop and implmement tooling and processes to manage large sets of infrastructure effectively with a small team.  Drive the Kubernetes and containerization initiatives.</p>
                     </div>
                 </dd>
                 <dt>
