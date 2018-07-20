@@ -1,0 +1,3 @@
+# Redirect default Netlify subdomain to primary domain
+https://happy-edison-708afa.netlify.com/* https://www.mikenewswanger.com/:splat 301!
+
