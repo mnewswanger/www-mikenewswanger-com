@@ -5,7 +5,7 @@ tags: [golang, performance]
 description: Diving into go benchmark result data.
 ---
 
-Benchmarking is a great way to understand how your code is performing, and the go benchmark tools can show both execution times and memory allocation data.  This can be very handy for performance tuning because you have empircal evidence that a change you made is making the difference you expect.
+Benchmarking is a great way to understand how your code is performing, and the go benchmark tools can show both execution times and memory allocation data.  This can be very handy for performance tuning because youg have empircal evidence that a change you made is making the difference you expect.
 
 ## How does it work?
 
@@ -172,7 +172,7 @@ func (r BenchmarkResult) String() string {
 }
 ```
 
-What we can see here is that the duration of the test run is divided by the iterations run in the test.  This is an incorrect calculation--it's going the wrong direction.  What should be happening here is that the number of iterations run should be calculated over a fixed unit of time instead, giving us a result with the unit `ops/s` based on the data we have.
+What we can see here is that the duration of the test run (`r.T.Nanoseconds()`) is divided by the iterations run in the test (`r.N`).  This is an incorrect calculation--it's going the wrong direction.  What should be happening here is that the number of iterations run should be calculated over a fixed unit of time instead, giving us a result with the unit `ops/s` based on the data we have.
 
 In the existing scenario, dividing a time duration by completed operations, we get a rate, not a time period per operation.  Switching the numbers around gives a number that's actually relatively useless.  While seeing decreases will show that increasing concurrency increases performance, the number itself can only be used as a relative comparison, because as shown above, a sleep of 1ms is never going to complete in less than that.
 
