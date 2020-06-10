@@ -143,11 +143,36 @@ description: ""
                 <div class="col-md-6 ">
                     <div class="featured-item career-box text-center">
                         <div class="title text-uppercase">
+                            <h4>Dynamic SaaS Stateful Egress Firewall (2020)</h4>
+                            <p>Lead the architecture, development implementation, and deployment of a dynamic stateful egress firewall on a multi-provider SaaS platform.  Impact assessment and tooling to automate large-scale tests was created using Terraform and Go, and the firewall management processes were implemented in Scala.</p>
+                        </div>
+                        <div class="desc">
+                            <p>Lead impelemtnation</p>
+                            <p>Scala - Golang - Docker - IPTables</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="featured-item career-box text-center">
+                        <div class="title text-uppercase">
                             <h4>On-Premises Kubernetes Deployment (2018)</h4>
                         </div>
                         <div class="desc">
                             <p>Created Ansible playbooks and go tooling to manage on-premises Kubernetes clusters.  Clusters are deployed with full encryption and authentication--TLS server identification, TLS client authentication, and Kubernetes RBAC permissions.  Minimal configuration is needed to alter an existing cluster or add another to any environment.  Haproxy Kubefigurator tool is used to configure load balancers to expose services outside the cluster.</p>
                             <p>Ansible - Golang - Bare Metal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 ">
+                    <div class="featured-item career-box text-center">
+                        <div class="title text-uppercase">
+                            <h4>Guetzli Image Optimization (2017)</h4>
+                        </div>
+                        <div class="desc">
+                            <p>Designed a distributed system to bulk-process over nine million images on our web properties.  Utilized Google Container Engine to distribute processing across 3,600 containers across three regions, and maintained an average of over 99% CPU utilization, allowing it to complete nearly two years’ processor time in under 3 days.  Wrote a high-performance queueing system, download queue, worker processes, and downloaders and distributed via containers both on-premise and in cloud infrastructure.  This reduced our image sizes by about 80% on average.</p>
+                            <p>Golang - Kubernetes - Google Cloud</p>
                         </div>
                     </div>
                 </div>
@@ -167,35 +192,11 @@ description: ""
                 <div class="col-md-6 ">
                     <div class="featured-item career-box text-center">
                         <div class="title text-uppercase">
-                            <h4>Docker Registry Web UI (2016)</h4>
-                        </div>
-                        <div class="desc">
-                            <p>Used React to create an interface to view the contents of an internally hosted Docker registry.  It organizes and displays all images and links to internal documentation for the images.</p>
-                            <p>NodeJS - React</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 ">
-                    <div class="featured-item career-box text-center">
-                        <div class="title text-uppercase">
                             <h4>Container Factory (2016)</h4>
                         </div>
                         <div class="desc">
                             <p>Developed a tool to hierarchically build Docker images.  It allows for the use of inheritance, reduces code duplication, and maps build dependencies while providing a consistent build experience for all users.</p>
                             <p>Golang - Docker</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 ">
-                    <div class="featured-item career-box text-center">
-                        <div class="title text-uppercase">
-                            <h4>Guetzli Image Optimization (2017)</h4>
-                        </div>
-                        <div class="desc">
-                            <p>Designed a distributed system to bulk-process over nine million images on our web properties.  Utilized Google Container Engine to distribute processing across 3,600 containers across three regions, and maintained an average of over 99% CPU utilization, allowing it to complete nearly two years’ processor time in under 3 days.  Wrote a high-performance queueing system, download queue, worker processes, and downloaders and distributed via containers both on-premise and in cloud infrastructure.  This reduced our image sizes by about 80% on average.</p>
-                            <p>Golang - Kubernetes - Google Cloud</p>
                         </div>
                     </div>
                 </div>
@@ -295,7 +296,7 @@ description: ""
                 <dd>
                     <div>
                         <strong>Cloud Engineer</strong> - <em>May 2018 - Present</em>
-                        <p>Develop products to support Elastic SAAS offerings on multiple cloud platforms.</p>
+                        <p>Develop products to support Elastic SAAS offerings on multiple cloud platforms with a focus on networking components.  Key contributor to a L4 and L7 proxy implemented in Go that reduced CPU usage by 80%, improved visibility and reliabilty, and decreased memory requirements over the previous solution.  Create various tooling to allow for faster, more confident service deployments.</p>
                     </div>
                 </dd>
                 <dt>
@@ -312,12 +313,12 @@ description: ""
                 </dt>
                 <dd>
                     <div>
-                        <strong>Site Reliability Engineering Manager</strong> - <em>November 2016 - August 2017</em>
+                        <strong>Site Reliability Engineering Technical Lead</strong> - <em>November 2016 - August 2017</em>
                         <p>Lead the Site Reliability Engineering (SRE) team of eight supporting over 100 developers.  Guided SREs in orchestration and deployment strategies, developed supporting tools, and trained employees on issue resolution.</p>
                     </div>
                     <div>
-                        <strong>Web Operations Manager</strong> - <em>October 2012 - November 2016</em>
-                        <p>Built up the Web Operations team from scratch to eight Site Reliability Engineers, eight Database Administrators, and four Systems Engineers.  Developed high-availability and infrastructure strategies that reduced hardware budgets by over 50% while providing greater performance.</p>
+                        <strong>Director of Web Operations</strong> - <em>October 2012 - November 2016</em>
+                        <p>Built up the Web Operations team from scratch to eight Site Reliability Engineers, eight Database Administrators, and four Systems Engineers and implemented framework for continued growth.  Developed high-availability and infrastructure strategies that reduced hardware budgets by over 50% while providing greater performance.</p>
                     </div>
                     <div>
                         <strong>Database Administrator</strong> - <em>October 2011 - October 2012</em>
