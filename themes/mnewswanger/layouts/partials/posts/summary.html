@@ -1,11 +1,11 @@
 <div class="blog-post">
-    <h2 class="m-bot-0"><a href="{{ .URL }}">{{ .Title }}</a></h2>
+    <h2 class="m-bot-0"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     <div>
         <p class="m-bot-0"><em>{{ .Date.Format "January 2, 2006" }} 
         {{ if gt .Lastmod .Date }}
         ; Updated {{ .Lastmod.Format "January 2, 2006" }}
         {{ end }}
         </em></p>
-        <p>{{ .Description  }}<br>&raquo; <a href="{{ .URL }}">Read More</a></p>
+        <p>{{ .Description  }}<br>&raquo; <a href="{{ .RelPermalink }}">Read More</a></p>
     </div>
 </div>

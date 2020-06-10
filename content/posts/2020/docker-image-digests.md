@@ -19,7 +19,7 @@ More information about images can be found in [Docker documentation](https://doc
 
 Digests for pulled images can be listed by running `docker images --digests` (lines wrapped for better viewability):
 
-```bash
+```no-highlight
 $ docker images --digests
 REPOSITORY                TAG                 DIGEST
     IMAGE ID            CREATED             SIZE
@@ -35,7 +35,7 @@ Note: _`uname -a`, which is commonly used to check a host's running version, won
 
 20.04:
 
-```bash
+```no-highlight
 $ docker run --rm ubuntu:20.04 /bin/bash -c "cat /etc/lsb-release"
 DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=20.04
@@ -44,7 +44,7 @@ DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
 ```
 
 16.04:
-```bash
+```no-highlight
 $ docker run --rm ubuntu:16.04 /bin/bash -c "cat /etc/lsb-release"
 DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=16.04
@@ -56,7 +56,7 @@ All good. We've run the tags we wanted and verified that the container contents 
 
 Now, let's re-run 20.04 with a checksum (copied from the output of `docker images --digests` above):
 
-```bash
+```no-highlight
 $ docker run --rm ubuntu:20.04@sha256:8bce67040cd0ae39e0beb55bcb976a824d9966d2ac8d2e4bf6119b45505cee64 /bin/bash -c "cat /etc/lsb-release"
 DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=20.04
@@ -66,7 +66,7 @@ DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
 
 Also what we'd expect to see. But now, let's instead copy the digest of the 16.04 image:
 
-```bash
+```no-highlight
 $ docker run --rm ubuntu:20.04@sha256:db6697a61d5679b7ca69dbde3dad6be0d17064d5b6b0e9f7be8d456ebb337209 /bin/bash -c "cat /etc/lsb-release"
 DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=16.04
@@ -78,7 +78,7 @@ Now, we're showing a tag of `20.04`, but our image is `16.04`. Let's investigate
 
 I'll kick off an idle process in new container: `docker run --rm -ti ubuntu:20.04@sha256:db6697a61d5679b7ca69dbde3dad6be0d17064d5b6b0e9f7be8d456ebb337209 /bin/bash` using the tag and digest from the last scenario above, then check the `docker ps` output (again wrapped for viewability):
 
-```bash
+```no-highlight
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED
     STATUS              PORTS                    NAMES
@@ -90,7 +90,7 @@ We can now see that `docker ps` output shows the tag that was specified by the `
 
 We can even use tags that don't exist:
 
-```bash
+```no-highlight
 $ docker run --rm ubuntu:tag-does-not-exist@sha256:db6697a61d5679b7ca69dbde3dad6be0d17064d5b6b0e9f7be8d456ebb337209 /bin/bash -c "cat /etc/lsb-release"
 DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=16.04
@@ -100,7 +100,7 @@ DISTRIB_DESCRIPTION="Ubuntu 16.04.6 LTS"
 
 And even `docker pull` works for that non-existent tag:
 
-```bash
+```no-highlight
 $ docker pull ubuntu:tag-does-not-exist@sha256:db6697a61d5679b7ca69dbde3dad6be0d17064d5b6b0e9f7be8d456ebb337209
 sha256:db6697a61d5679b7ca69dbde3dad6be0d17064d5b6b0e9f7be8d456ebb337209: Pulling from library/ubuntu
 e92ed755c008: Pull complete
@@ -114,7 +114,7 @@ docker.io/library/ubuntu:tag-does-not-exist@sha256:db6697a61d5679b7ca69dbde3dad6
 
 The digest is scoped to the image namespace and name, however, so the following does not work when pulling a non-existent image even though that digest exists on the Docker host:
 
-```bash
+```no-highlight
 $ docker pull not-an-image:tag-does-not-exist@sha256:db6697a61d5679b7ca69dbde3dad6be0d17064d5b6b0e9f7be8d456ebb337209
 Error response from daemon: pull access denied for not-an-image, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
 ```
